@@ -1,6 +1,8 @@
 //= require jquery.simulate
+//= require search-autocomplete
 
 OSM.Search = function(map) {
+
   $(".search_form input[name=query]").on("input", function(e) {
     if ($(e.target).val() === "") {
       $(".describe_location").fadeIn(100);
@@ -54,6 +56,12 @@ OSM.Search = function(map) {
         moved = true;
       });
     });
+  
+  var ac1 = new AlgoliaCityAutocomplete(),
+      ac2 = new AlgoliaCityAutocomplete();
+
+  ac1.init('.algolia-autocomplete input[type="text"]:eq(0)', 'small');
+  ac2.init('.algolia-autocomplete input[type="text"]:eq(1)', 'large');
 
   function clickSearchMore(e) {
     e.preventDefault();

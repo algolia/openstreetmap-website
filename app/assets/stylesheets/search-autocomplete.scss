@@ -1,0 +1,133 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('fonts/icomoon.eot');
+}
+@font-face {
+	font-family: 'icomoon';
+	src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg8SAe4AAAC8AAAAYGNtYXAaVsyIAAABHAAAAFRnYXNwAAAAEAAAAXAAAAAIZ2x5ZuMG74MAAAF4AAAA7GhlYWQF2JA5AAACZAAAADZoaGVhBuwDxwAAApwAAAAkaG10eAxJANYAAALAAAAAGGxvY2EAngBwAAAC2AAAAA5tYXhwAAkAKgAAAugAAAAgbmFtZZlKCfsAAAMIAAABhnBvc3QAAwAAAAAEkAAAACAAAwLDAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADmAQPA/8AAQAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAADAAAAAwAAABwAAQADAAAAHAADAAEAAAAcAAQAOAAAAAoACAACAAIAAQAg5gH//f//AAAAAAAg5gD//f//AAH/4xoEAAMAAQAAAAAAAAAAAAAAAQAB//8ADwABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAACAAAAAAJJA24AEAAnAAABNCcmIyIHBhUUFxYzMjc2NTMUBwMGBwYjIicmJwMmNTQ3NjMyFxYVAbcrKzw9KysrKz08KyuSE9AJEhIUFRISCdATVlV6eVVWAkk9KyoqKz08KysrKzw+KP5GEwsLCwsTAbooPnlWVlZWeQAAAQDWAIEDKgLVAAsAAAEHFwcnByc3JzcXNwMq7u487u487u487u4Cme7uPO7uPO7uPO7uAAEAAAABAAC/U2D9Xw889QALBAAAAAAA0cgl5wAAAADRyCXnAAAAAAMqA24AAAAIAAIAAAAAAAAAAQAAA8D/wAAABAAAAAAAAyoAAQAAAAAAAAAAAAAAAAAAAAYEAAAAAAAAAAAAAAACAAAAAkkAAAQAANYAAAAAAAoAFAAeAFwAdgAAAAEAAAAGACgAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAHAAAAAQAAAAAAAgAHAGAAAQAAAAAAAwAHADYAAQAAAAAABAAHAHUAAQAAAAAABQALABUAAQAAAAAABgAHAEsAAQAAAAAACgAaAIoAAwABBAkAAQAOAAcAAwABBAkAAgAOAGcAAwABBAkAAwAOAD0AAwABBAkABAAOAHwAAwABBAkABQAWACAAAwABBAkABgAOAFIAAwABBAkACgA0AKRpY29tb29uAGkAYwBvAG0AbwBvAG5WZXJzaW9uIDEuMABWAGUAcgBzAGkAbwBuACAAMQAuADBpY29tb29uAGkAYwBvAG0AbwBvAG5pY29tb29uAGkAYwBvAG0AbwBvAG5SZWd1bGFyAFIAZQBnAHUAbABhAHJpY29tb29uAGkAYwBvAG0AbwBvAG5Gb250IGdlbmVyYXRlZCBieSBJY29Nb29uLgBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABJAGMAbwBNAG8AbwBuAC4AAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+	content: "\e601";
+}
+.icon-map-marker:before {
+	content: "\e600";
+}
+
+body {
+  background-color: #777;
+}
+
+.container {
+  max-width: 500px;
+}
+
+.algolia-autocomplete {
+  font-family: Helvetica;
+  position: relative;
+}
+
+.algolia-autocomplete .input-wrap {
+  position: relative;
+}
+
+.algolia-autocomplete .icon-close {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -9px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #ccc;
+  display: none;
+}
+
+.algolia-autocomplete .icon-close:hover {
+  color: #0a44ff;
+}
+
+.algolia-autocomplete-results {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  width: 350px;
+  list-style: none;
+  border-top: 0;
+  position: absolute;
+  top: 105px;
+  font-size: 11px;
+  z-index: 9999;
+}
+
+.algolia-autocomplete-results:empty {
+  display: none;
+}
+
+.algolia-autocomplete-results li {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  position: relative;
+}
+
+.algolia-autocomplete-results li:hover {
+  background-color: #ededed;
+}
+
+.algolia-autocomplete-results li.selected {
+  background-color: #ebf2fe;
+}
+
+.algolia-autocomplete-results li .text {
+  display: block;
+  margin-left: 20px;
+}
+
+.algolia-autocomplete-results li .icon-map-marker {
+  color: #ccc;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 10px;
+  font-size: 16px;
+}
+
+.algolia-autocomplete-results li.selected .icon-map-marker {
+  color: #0a44ff;
+}
+
+.algolia-autocomplete-results li em {
+  font-weight: bold; 
+  font-style: normal;
+}
+
+.algolia-autocomplete-results li:last-child {
+  border-bottom: 0;
+}
+
+.algolia-autocomplete-results.small {
+  top: 99px;
+  width: 100%;
+  font-size: 18px;
+}
