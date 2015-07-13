@@ -40,6 +40,9 @@ gem "r2"
 # Use autoprefixer to generate CSS prefixes
 gem "autoprefixer-rails"
 
+# Algolia instant search
+gem "algoliasearch-rails"
+
 # Load rails plugins
 gem "rails-i18n", "~> 4.0.0"
 gem "dynamic_form"

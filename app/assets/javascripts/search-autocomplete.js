@@ -1,5 +1,3 @@
-//= require algolia/v3/algoliasearch.min
-
 var AlgoliaCityAutocomplete = function() {
 	var index, state, selectIndex,  
       $input, $results, $cancel, 

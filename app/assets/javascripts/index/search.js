@@ -1,7 +1,26 @@
 //= require jquery.simulate
+//= require algolia/v3/algoliasearch.min
 //= require search-autocomplete
 
 OSM.Search = function(map) {
+
+  var index = algoliasearch('X4RSDH730N', '17a129595cc89afb49e0e0055c51ecef')
+    .initIndex('OpenStreetMap_Cities');
+  
+  var search      = new AlgoliaCityAutocomplete(),
+      searchSmall = new AlgoliaCityAutocomplete();
+
+  search.init({
+    index: index,
+    el: '.algolia-autocomplete input[type="text"]:eq(0)', 
+    resultsClass: 'small'
+  });
+
+  searchSmall.init({
+    index: index,
+    el: '.algolia-autocomplete input[type="text"]:eq(1)', 
+    resultsClass: 'large'
+  });
 
   $(".search_form input[name=query]").on("input", function(e) {
     if ($(e.target).val() === "") {
@@ -56,29 +75,6 @@ OSM.Search = function(map) {
         moved = true;
       });
     });
-
-  var index = algoliasearch('X4RSDH730N', '17a129595cc89afb49e0e0055c51ecef')
-    .initIndex('OpenStreetMap_Cities');
-  
-  var ac1 = new AlgoliaCityAutocomplete(),
-      ac2 = new AlgoliaCityAutocomplete(),
-      ac3 = new AlgoliaCityAutocomplete(),
-      ac4 = new AlgoliaCityAutocomplete();
-
-  ac1.init({
-    index: index,
-    el: '.algolia-autocomplete input[type="text"]:eq(0)', 
-    resultsClass: 'small'
-  });
-
-  ac2.init({
-    index: index,
-    el: '.algolia-autocomplete input[type="text"]:eq(1)', 
-    resultsClass: 'large'
-  });
-
-  /*ac3.init('.directions_form input[type="text"]:eq(0)', 'from-small');
-  ac4.init('.directions_form input[type="text"]:eq(1)', 'to-sm  all');*/
 
   function clickSearchMore(e) {
     e.preventDefault();
