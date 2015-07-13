@@ -1,9 +1,8 @@
 //= require algolia/v3/algoliasearch.min
 
 var AlgoliaCityAutocomplete = function() {
-	var client, index, 
-			$input, $results, $cancel, 
-			state, selectIndex,
+	var index, state, selectIndex,  
+      $input, $results, $cancel, 
 			KEYBOARD = {
 				UP: 38,
 				DOWN: 40,
@@ -27,16 +26,17 @@ var AlgoliaCityAutocomplete = function() {
       .on('click', 'li', cancelInput);
 	};
 
-	var init = function(sel, resultSel) {
-		client = algoliasearch('X4RSDH730N', '17a129595cc89afb49e0e0055c51ecef');
-		index = client.initIndex('OpenStreetMap_Cities');
+	var init = function(params) {
+		index = params.index;
 
-		$input = $(sel)
+		$input = $(params.el)
       .wrap('<div class="input-wrap"></div>');
+
     $results = $('body')
-      .append('<ul class="algolia-autocomplete-results ' + resultSel + '"></ul>')
-      .find('.algolia-autocomplete-results.' + resultSel);
-    $cancel = $(sel)
+      .append('<ul class="algolia-autocomplete-results ' + params.resultsClass + '"></ul>')
+      .find('.algolia-autocomplete-results.' + params.resultsClass);
+
+    $cancel = $(params.el)
       .parent()
       .append('<i class="icon-close"></i>')
       .find('.icon-close')
