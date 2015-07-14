@@ -1,6 +1,27 @@
 //= require jquery.simulate
+//= require algolia/v3/algoliasearch.min
+//= require search-autocomplete
 
 OSM.Search = function(map) {
+
+  var index = algoliasearch('X4RSDH730N', '17a129595cc89afb49e0e0055c51ecef')
+    .initIndex('OpenStreetMap_Cities');
+  
+  var search      = new AlgoliaCityAutocomplete(),
+      searchSmall = new AlgoliaCityAutocomplete();
+
+  search.init({
+    index: index,
+    el: '.algolia-autocomplete input[type="text"]:eq(0)', 
+    resultsClass: 'small'
+  });
+
+  searchSmall.init({
+    index: index,
+    el: '.algolia-autocomplete input[type="text"]:eq(1)', 
+    resultsClass: 'large'
+  });
+
   $(".search_form input[name=query]").on("input", function(e) {
     if ($(e.target).val() === "") {
       $(".describe_location").fadeIn(100);
