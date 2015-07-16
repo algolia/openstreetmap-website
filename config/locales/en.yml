@@ -953,10 +953,6 @@ en:
       text: Make a Donation
     learn_more: "Learn More"
     more: More
-    donate_header: Support OpenStreetMap
-    donate_line_1: Bigger Servers for a
-    donate_line_2: Growing OpenStreetMap
-    donate_line_3: Hardware Funding Drive 2015
   license_page:
     foreign:
       title: About this translation
@@ -2242,25 +2238,25 @@ en:
         no_route: "Couldn't find a route between those two places."
         no_place: "Sorry - couldn't find that place."
       instructions:
-        continue_on: Continue on
-        slight_right: Slight right onto
-        turn_right: Turn right onto
-        sharp_right: Sharp right onto
-        uturn: U-turn along
-        sharp_left: Sharp left onto
-        turn_left: Turn left onto
-        slight_left: Slight left onto
-        via_point: (via point)
-        follow: Follow
-        roundabout: At roundabout take
-        leave_roundabout: Leave roundabout -
-        stay_roundabout: Stay on roundabout -
-        start: Start at end of
-        destination: Reach destination
-        against_oneway: Go against one-way on
-        end_oneway: End of one-way on
-        exit: exit %{exit}
-        unnamed: "(unnamed)"
+        continue_without_exit: Continue on %{name}
+        slight_right_without_exit: Slight right onto %{name}
+        turn_right_without_exit: Turn right onto %{name}
+        sharp_right_without_exit: Sharp right onto %{name}
+        uturn_without_exit: U-turn along %{name}
+        sharp_left_without_exit: Sharp left onto %{name}
+        turn_left_without_exit: Turn left onto %{name}
+        slight_left_without_exit: Slight left onto %{name}
+        via_point_without_exit: (via point)
+        follow_without_exit: Follow %{name}
+        roundabout_without_exit: At roundabout take %{name}
+        leave_roundabout_without_exit: Leave roundabout - %{name}
+        stay_roundabout_without_exit: Stay on roundabout - %{name}
+        start_without_exit: Start at end of %{name}
+        destination_without_exit: Reach destination
+        against_oneway_without_exit: Go against one-way on %{name}
+        end_oneway_without_exit: End of one-way on %{name}
+        roundabout_with_exit: At roundabout take exit %{exit} onto %{name}
+        unnamed: "unnamed road"
         courtesy: "Directions courtesy of %{link}"
       time: "Time"
     query:

@@ -22,6 +22,7 @@
 # Author: JB
 # Author: Jean-Frédéric
 # Author: Jiremek
+# Author: Linedwell
 # Author: Litlok
 # Author: Ljubinka
 # Author: Lucky
@@ -46,6 +47,7 @@
 # Author: Urhixidur
 # Author: Vcalame
 # Author: Verdy p
+# Author: Yodaspirine
 # Author: Yvecai
 ---
 fr:
@@ -494,7 +496,7 @@ fr:
           food_court: Aire de restauration
           fountain: Fontaine
           fuel: Carburant
-          gambling: Jeu
+          gambling: Club de jeu
           grave_yard: Cimetière
           gym: Fitness / gymnastique
           health_centre: Centre de santé / dispensaire
@@ -647,7 +649,7 @@ fr:
           wayside_shrine: Oratoire
           wreck: Épave
         junction:
-          "yes": Jonction
+          "yes": Intersection / Carrefour
         landuse:
           allotments: Jardins familiaux
           basin: Bassin
@@ -1015,10 +1017,6 @@ fr:
       text: Faire un don
     learn_more: En savoir plus
     more: Plus
-    donate_header: Soutenir OpenStreetMap
-    donate_line_1: Plus gros serveurs pour une
-    donate_line_2: Croissance de OpenStreetMap
-    donate_line_3: Campagne de financement du matériel 2015
   license_page:
     foreign:
       title: À propos de cette traduction
@@ -2275,6 +2273,8 @@ fr:
       heading: '%{block_on} bloqué par %{block_by}'
       time_future: Se termine dans %{time}
       time_past: S'est terminé il y a %{time}
+      created: Créé
+      ago: il y a %{time}
       status: Statut
       show: Afficher
       edit: Modifier
@@ -2325,6 +2325,7 @@ fr:
       link: Lien ou HTML
       long_link: Lien
       short_link: Lien abrégé
+      geo_uri: URI géo
       embed: HTML
       custom_dimensions: Définir les dimensions personnalisées
       format: 'Format :'
@@ -2409,25 +2410,25 @@ fr:
         no_route: Impossible de trouver une route entre ces deux lieux.
         no_place: Désolé, impossible de trouver ce lieu.
       instructions:
-        continue_on: Continuer sur
-        slight_right: Tourner légèrement à droite sur
-        turn_right: Tourner à droite sur
-        sharp_right: Tournez à droite sur
-        uturn: Faites demi-tour sur
-        sharp_left: Tournez à gauche sur
-        turn_left: Tourner à gauche sur
-        slight_left: Tourner légèrement à gauche sur
-        via_point: (par le point)
-        follow: Suivre
-        roundabout: Au rond-point, prendre
-        leave_roundabout: Quitter le rond-point -
-        stay_roundabout: Rester sur le rond-point -
-        start: Démarrer à la fin de
-        destination: Atteignez la destination
-        against_oneway: Remonter le sens unique sur
-        end_oneway: Fin du passage à sens unique sur
-        exit: sortie %{exit}
-        unnamed: (sans nom)
+        continue_without_exit: Continuer sur %{name}
+        slight_right_without_exit: Tourner légèrement à droite sur %{name}
+        turn_right_without_exit: Tourner à droite sur %{name}
+        sharp_right_without_exit: Tournez vivement à droite sur %{name}
+        uturn_without_exit: Faites demi-tour sur %{name}
+        sharp_left_without_exit: Tournez vivement à gauche sur %{name}
+        turn_left_without_exit: Tourner à gauche sur %{name}
+        slight_left_without_exit: Tourner légèrement à gauche sur %{name}
+        via_point_without_exit: (par le point)
+        follow_without_exit: Suivre %{name}
+        roundabout_without_exit: Au rond-point, prendre %{name}
+        leave_roundabout_without_exit: Quitter le rond-point - %{name}
+        stay_roundabout_without_exit: Rester sur le rond-point - %{name}
+        start_without_exit: Démarrer à la fin de %{name}
+        destination_without_exit: Atteignez la destination
+        against_oneway_without_exit: Remonter le sens unique sur %{name}
+        end_oneway_without_exit: Fin du passage à sens unique sur %{name}
+        roundabout_with_exit: Au rond-point prendre la sortie %{exit} sur %{name}
+        unnamed: sans nom
         courtesy: Itinéraire de la part de %{link}
       time: Temps
     query:
@@ -2454,7 +2455,7 @@ fr:
       title: Créer unn nouveau masquage
     show:
       description: 'Description :'
-      heading: Masquage "%{title}"
+      heading: Démasquage "%{title}"
       title: Affichage du masquage
       user: 'Créateur :'
       edit: Modifier ce masquage

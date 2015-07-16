@@ -38,6 +38,7 @@
 # Author: Spider
 # Author: TarzanASG
 # Author: Tourorist
+# Author: WindEwriX
 # Author: XAN
 # Author: Yuri Nazarov
 # Author: Zverik
@@ -2216,6 +2217,7 @@ ru:
       heading: '%{block_on}, наложил блокировку: %{block_by}'
       time_future: Заканчивается %{time}
       time_past: Закончилась %{time} назад
+      ago: '%{time} назад'
       status: Состояние
       show: Показывать
       edit: Изменить
@@ -2351,24 +2353,7 @@ ru:
         no_route: Не удалось найти маршрут между этими двумя точками.
         no_place: К сожалению, данное место не найдено.
       instructions:
-        continue_on: Продолжайте движение по
-        slight_right: Плавно поверните направо на
-        turn_right: Поверните направо на
-        sharp_right: Резко поверните направо на
-        uturn: Развернитесь на
-        sharp_left: Резко поверните налево на
-        turn_left: Поверните налево на
-        slight_left: Плавно поверните налево на
-        via_point: (через точку)
-        follow: Следуйте по
-        roundabout: На кольце
-        leave_roundabout: Выехать из кольца
-        stay_roundabout: Оставаться на кольце
-        start: Начните в конце
-        destination: Вы прибыли в место назначения
-        against_oneway: Двигайтесь против одностороннего движения по
-        end_oneway: Конец одностороннего движения на
-        unnamed: (без имени)
+        unnamed: без имени
         courtesy: Маршрут предоставлен %{link}
       time: Время
     query:

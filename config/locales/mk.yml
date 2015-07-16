@@ -970,10 +970,6 @@ mk:
       text: Дарувајте
     learn_more: Дознајте повеќе
     more: Повеќе
-    donate_header: Поддржете ја OpenStreetMap
-    donate_line_1: Поголеми опслужувачи за
-    donate_line_2: Раст на OpenStreetMap
-    donate_line_3: Прибирање средства за машинска опрема 2015
   license_page:
     foreign:
       title: За овој превод
@@ -2223,6 +2219,8 @@ mk:
       heading: '%{block_on} блокиран од %{block_by}'
       time_future: Уредувања во %{time}
       time_past: Истечено пред %{time}
+      created: Создадено
+      ago: пред %{time}
       status: Статус
       show: Прикажи
       edit: Уреди
@@ -2273,6 +2271,7 @@ mk:
       link: Врска или HTML
       long_link: Врска
       short_link: Кратка врска
+      geo_uri: ГЕО-URI
       embed: HTML
       custom_dimensions: Димензии по ваш избор
       format: 'Формат:'
@@ -2357,25 +2356,8 @@ mk:
         no_route: Не можев да најдам маршрута помеѓу тие две места.
         no_place: За жал, не можев да го најдам тоа место.
       instructions:
-        continue_on: Продолжи
-        slight_right: Малку надесно во
-        turn_right: Свртете десно во
-        sharp_right: Остро надесно во
-        uturn: Полукружно свртете долж
-        sharp_left: Остро налево во
-        turn_left: Свртете лево во
-        slight_left: Малку налево во
-        via_point: (преку точката)
-        follow: Следи
-        roundabout: На кружниот тек свртете
-        leave_roundabout: Напуштете го кружниот тек —
-        stay_roundabout: Останете на кружниот тек —
-        start: Почнете на крајот од
-        destination: Стигнавте на одредиштето
-        against_oneway: Оди обратно во еднонасочната
-        end_oneway: Крај на еднонасочната
-        exit: излези од %{exit}
-        unnamed: (неименувано)
+        roundabout_with_exit: На кружниот тек, свртете на %{exit} излегувајќи на %{name}
+        unnamed: неименувано
         courtesy: Насоките ги добивте благодарение на %{link}
       time: Време
     query:

@@ -1123,6 +1123,7 @@ lb:
     show:
       title: '%{block_on} gespaart vum %{block_by}'
       heading: '%{block_on} gespaart vum %{block_by}'
+      ago: viru(n) %{time}}
       status: Status
       show: Weisen
       edit: Änneren
@@ -1182,9 +1183,8 @@ lb:
       directions: Richtungen
       distance: Distanz
       instructions:
-        continue_on: Weider op
-        exit: aus %{exit} erausgoen
-        unnamed: (ouni Numm)
+        continue_without_exit: Virun op %{name}
+        unnamed: ouni Numm
       time: Zäit
     query:
       way: Wee

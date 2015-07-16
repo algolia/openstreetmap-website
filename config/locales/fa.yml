@@ -1984,7 +1984,7 @@ fa:
         به هیچ درخواست تأییدی نیستیم.
       failure: کاربر %{name} یافت نشد.
     confirm_email:
-      heading: تأیید تغییر آدرس ایمیل
+      heading: تأیید تغییر نشانی ایمیل
       press confirm button: برای تأیید آدرس ایمیل جدیدتان دکمهٔ تأیید زیر را فشار
         دهید.
       button: تأیید
@@ -2145,6 +2145,8 @@ fa:
       heading: '%{block_on} توسط %{block_by} بلوک شده'
       time_future: در %{time} پایان می پذیرد
       time_past: به پایان رسیده %{time} قبل
+      created: ایجاد شده
+      ago: '%{time} پیش'
       status: وضعیت
       show: نمایش
       edit: ویرایش
@@ -2276,16 +2278,7 @@ fa:
         no_route: نتوانستیم بین آن دو مکان، مسیری بیابیم.
         no_place: متاسفیم - محل پیدا نشد.
       instructions:
-        continue_on: مستقیم به طرف
-        slight_right: به آرامی به سمت راست به طرف
-        turn_right: گردش به راست به طرف
-        turn_left: گردش به چپ به طرف
-        slight_left: به آرامی به سمت چپ به طرف
-        follow: دنبال‌کردن
-        start: شروع در انتهای
-        destination: ورود به مقصد
-        exit: خروج %{exit}
-        unnamed: (بی نام)
+        unnamed: بی نام
         courtesy: جهت از %{link}
       time: مدت
     query:

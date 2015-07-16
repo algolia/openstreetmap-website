@@ -241,7 +241,7 @@ it:
         fa</abbr>
       hidden_by: Nascosta da %{user} <abbr title='%{exact_time}'>%{when} fa</abbr>
     query:
-      title: Funzionalità di query
+      title: Ricerca di elementi
       introduction: Clicca sulla cartina per disponibilità nei pressi.
       nearby: Disponibilità nei pressi
       enclosing: Elementi interni
@@ -999,10 +999,6 @@ it:
       text: Fai una donazione
     learn_more: Ulteriori informazioni
     more: Altro
-    donate_header: Supporto mappa OpenStreet
-    donate_line_1: Grandi server per
-    donate_line_2: Crescente OpenStreetMap
-    donate_line_3: Hardware funding drive 2015
   license_page:
     foreign:
       title: A proposito di questa traduzione
@@ -1139,6 +1135,12 @@ it:
         come il nome di un ristorante o i limiti di velocità di una strada.
     rules:
       title: Regole!
+      paragraph_1_html: "OpenStreetMap ha poche regole formali, ma ci aspettiamo che
+        tutti i partecipanti collaborino\ncon, e comunichino con la comunità. Se stai
+        considerando qualsiasi attività di editing manuale, sei <a href='http://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct'>pregato
+        di leggere e seguire le indicazioni \n<a href=\"http://wiki.openstreetmap.org/wiki/Import/Guidelines\">Le
+        importazioni</a> e \n<a href=\"http://wi</a>ki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct\">Automatizzato
+        Modifiche</a>."
     questions:
       title: Domande?
       paragraph_1_html: |-
@@ -2364,25 +2366,7 @@ it:
         no_route: Impossibile trovare un percorso fra questi due posti.
         no_place: Spiacenti, non è possibile trovare quel luogo.
       instructions:
-        continue_on: Prosegui
-        slight_right: Svolta leggermente a destra in
-        turn_right: Svolta a destra verso
-        sharp_right: Svolta bruscamente a destra in
-        uturn: Inversione ad U lungo
-        sharp_left: Svolta bruscamente a sinistra in
-        turn_left: Svolta a sinistra verso
-        slight_left: Svolta leggermente a sinistra in
-        via_point: (punto intermedio)
-        follow: Segui
-        roundabout: Alla rotatoria prendi
-        leave_roundabout: Esci dalla rotatoria
-        stay_roundabout: Rimani nella rotatoria
-        start: Inizia alla fine di
-        destination: Raggiungi la destinazione
-        against_oneway: Vai contro il senso unico in
-        end_oneway: Fine del senso unico in
-        exit: uscita %{exit}
-        unnamed: (senza nome)
+        unnamed: senza nome
         courtesy: Indicazioni per gentile concessione di %{link}
       time: Tempo
     query:
