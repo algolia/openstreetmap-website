@@ -104,3 +104,9 @@ group :development, :test do
   gem "poltergeist"
   gem "coveralls", :require => false
 end
+
+#Twitter typeahead
+gem "twitter-typeahead-rails", "0.10.5"
+
+#Algolia search
+gem "algoliasearch-rails"

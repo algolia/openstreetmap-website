@@ -17,6 +17,8 @@
 //= require piwik
 //= require richtext
 //= require querystring
+//= require twitter/typeahead.min
+//= require algolia/v3/algoliasearch.min
 
 var querystring = require('querystring-component');
 

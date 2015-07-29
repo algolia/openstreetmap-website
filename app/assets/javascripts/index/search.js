@@ -1,6 +1,31 @@
 //= require jquery.simulate
 
 OSM.Search = function(map) {
+
+  var client = algoliasearch('KRDOX3CQ3P', '76f9280bc41fa3aa97aa1d5565273dda');
+  var index = client.initIndex('test_cities');
+  var $input = $(".auto-completion input[name=query]");
+
+  $input.typeahead({hint: false}, {
+    source: index.ttAdapter({hitsPerPage: 5}),
+    displayKey: 'accentCity',
+    templates: {
+      suggestion: function(hit) {
+        // render the hit
+        return '<div class="hit">' +
+          '<div class="city"><em>' +
+            hit.accentCity + '</em> '
+            + ' - ' + hit.country.toUpperCase() +
+          '</div>' +
+        '</div>';
+      }
+    }
+  });
+
+  $(".typeahead").on("typeahead:selected", function(ev, suggestion, name) {
+    $(".search_form").submit();
+  });
+
   $(".search_form input[name=query]").on("input", function(e) {
     if ($(e.target).val() === "") {
       $(".describe_location").fadeIn(100);
