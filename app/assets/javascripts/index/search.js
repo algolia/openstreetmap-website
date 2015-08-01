@@ -1,6 +1,33 @@
 //= require jquery.simulate
 
 OSM.Search = function(map) {
+  var algolia, idx;
+
+  algolia = algoliasearch('A4H3Q0LE3T', 'cf91c81dd26f4e3bc03c02e4f9026172');
+  idx = algolia.initIndex('osm_idx');
+
+  // Typeahead UI
+  $('.autocomplete .typeahead').typeahead({ hint: false }, {
+    source: idx.ttAdapter({ hitsPerPage: 5 }),
+    displayKey: 'name',
+    templates: {
+      suggestion: function (city) {
+        // Render UI
+        return '<div class="hit">' +
+          '<div class="name">' +
+          '<img id="icon-location" src="https://cdn0.iconfinder.com/data/icons/iconico-3/1024/33.png" />' +
+            city.name + ', ' + city.country.toUpperCase() +
+          '</div>' +
+        '</div>';
+      }
+    }
+  });
+
+  // Form submission handler
+  $(".typeahead").on("typeahead:selected", function onSelected (ev, suggestion, name) {
+    $(".search_form").submit();
+  });
+
   $(".search_form input[name=query]").on("input", function(e) {
     if ($(e.target).val() === "") {
       $(".describe_location").fadeIn(100);
