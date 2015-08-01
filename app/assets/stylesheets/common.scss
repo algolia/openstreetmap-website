@@ -575,7 +575,6 @@ nav.secondary {
     z-index: 1000;
     height: auto;
     border-bottom-right-radius: 5px;
-    // overflow: hidden;
     .welcome {
       display: block;
     }
@@ -811,8 +810,7 @@ nav.secondary {
 .sidebar_heading {
   position: relative;
   padding: $lineheight/2 $lineheight;
-  // background: $offwhite;
-  // border-bottom: 1px solid #ccc;
+  
   > .close {
     float: right;
     margin-top: 2px;
