@@ -86,8 +86,8 @@ gem "dalli"
 gem "kgio"
 
 # Load algoliasearch-rails and twitter typeahead for search auto-completion
-gem "algoliasearch-rails"
 gem "twitter-typeahead-rails", "0.10.5"
+gem "algoliasearch-rails"
 
 # Gems useful for development
 group :development do
