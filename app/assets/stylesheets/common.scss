@@ -534,8 +534,6 @@ nav.secondary {
   #sidebar, #map {
     position: relative;
     height: 100%;
-    // overflow-x: hidden;
-    // overflow-y: auto;
   }
 
   #sidebar {
@@ -810,7 +808,7 @@ nav.secondary {
 .sidebar_heading {
   position: relative;
   padding: $lineheight/2 $lineheight;
-  
+
   > .close {
     float: right;
     margin-top: 2px;
