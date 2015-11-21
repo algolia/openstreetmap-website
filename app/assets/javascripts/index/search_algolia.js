@@ -22,9 +22,9 @@ SearchResultComponent.prototype = {
 
       var country_code = city.country_code.toLowerCase();
       var search_result = $("<a class='search_results'> </a>")
-      search_result.attr( "href", "#map=7/"+ city._geoloc.lat + "/" + city._geoloc.lng );
+      search_result.attr( "href", "#map=9/"+ city._geoloc.lat + "/" + city._geoloc.lng );
       flag = $("<div class='flag'><img width='20px' src='http://lipis.github.io/flag-icon-css/flags/4x3/"+ country_code + ".svg'></div>")
-      block = $("<div class='city'><p class='name'><b>"+ city.name +"</b></p><p class='country'>" + city.country + "</p>")
+      block = $("<div class='city'><p class='name'><b>"+ city._highlightResult.name.value +"</b></p><p class='country'>" + city.country + "</p>")
       flag.appendTo(search_result);
       block.appendTo(search_result);
       search_result.appendTo(this.container);
@@ -44,27 +44,73 @@ var SearchProxy = function ( ){
    this.index = this.client.initIndex('cities');
 }
 
+SearchComponent = function ( resultComponent ){
+
+   this.resultComponent = resultComponent;
+   this.search_input = $('.query_wrapper input');
+   this.pin = $('.query_wrapper .pin');
+   this.geolocation = false;
+   this.searchProxy = new SearchProxy();
+
+}
+
+SearchComponent.prototype = {
+
+   init: function() {
+      // Clear result on focus
+      this.search_input.on('focus', function ( e ){
+         this.resultComponent.clear();
+
+      }.bind(this))
+
+      // Auto complete search on keyup
+      this.search_input.on('keyup', function( e ) {
+         var query  = $(e.target).val();
+         this.query = query;
+         this.refresh();
+
+      }.bind(this))
+      
+      this.pin.on('click',  function ( e ){
+         this.toggleGeolocation();
+         this.refresh();
+
+      }.bind(this))
+
+   },
+
+   refresh: function (){
+      this.search( this.query, this.geolocation );
+
+      if ( !this.geolocation ) {
+         this.pin.addClass('disabled');
+      } else {
+         this.pin.removeClass('disabled');
+      }
+   },
+
+   search: function( query, geoloc ) {
+      this.query = query;
+      this.searchProxy.index.search(query,  { aroundLatLngViaIP: geoloc, hitsPerPage: 10, page: 0 }, function(err, hits) {
+         this.resultComponent.render( hits.hits );
+      }.bind(this));
+   },
+
+   toggleGeolocation: function (){
+      this.geolocation = !this.geolocation
+      this.refresh();
+
+   }
+}
+
 
 $(document).ready( function ( ){
 
-   var ResultComponent = new SearchResultComponent()
-   var search = new SearchProxy();
+   var resultComponent = new SearchResultComponent()
+   //var search = new SearchProxy();
+   var searchComponent = new SearchComponent( resultComponent );
+   searchComponent.init();
+   
 
-   var search_input =  $('.query_wrapper input');
-
-   // Clear result on focus
-   search_input.on('focus', function ( e ){
-      Component.clear();
-
-   })
-
-   // Auto complete search on keyup
-   search_input.on('keyup', function( e ) {
-      var query  = $(e.target).val();
-
-      search.index.search(query,  { hitsPerPage: 10, page: 0 }, function(err, hits) {
-         ResultComponent.render( hits.hits );
-      });
-   })
 
 })

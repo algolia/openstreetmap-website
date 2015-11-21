@@ -5,6 +5,7 @@
 <div class="search_forms">
   <form method="GET" action="<%= search_path %>" class="search_form">
     <div class='query_wrapper'>
+      <div class='pin disabled' ></div>
       <%= text_field_tag "query", params[:query], :placeholder => t("site.search.search"), :autofocus => autofocus, :class => 'overflow' , :autocomplete => 'off' %>
     </div>
   </form>
