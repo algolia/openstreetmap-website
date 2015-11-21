@@ -57,7 +57,8 @@ gem "actionpack-page_caching"
 # Omniauth for authentication
 gem "omniauth"
 gem "omniauth-openid"
-gem "openstreetmap-omniauth-google-oauth2", ">= 0.2.6.1", :require => "omniauth-google-oauth2"
+gem "omniauth-google-oauth2"
+#gem "openstreetmap-omniauth-google-oauth2", ">= 0.2.6.1", :require => "omniauth-google-oauth2"
 gem "omniauth-facebook"
 gem "omniauth-windowslive"
 
@@ -85,6 +86,10 @@ gem "soap4r-ruby1.9"
 gem "dalli"
 gem "kgio"
 
+# indexing city in algolia
+gem "cities"
+gem "algoliasearch"
+
 # Gems useful for development
 group :development do
   gem "vendorer"
@@ -103,4 +108,5 @@ group :development, :test do
   gem "konacha"
   gem "poltergeist"
   gem "coveralls", :require => false
+  gem "pry-rails"
 end
