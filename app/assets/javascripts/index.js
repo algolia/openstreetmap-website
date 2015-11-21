@@ -8,6 +8,7 @@
 //= require leaflet.polyline
 //= require leaflet.query
 //= require index/search
+//= require index/search_algolia
 //= require index/browse
 //= require index/export
 //= require index/notes
