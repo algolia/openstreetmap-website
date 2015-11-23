@@ -22,26 +22,38 @@ SearchResultComponent.prototype = {
 
       var country_code = city.country_code.toLowerCase();
       var search_result = $("<a class='search_results'> </a>")
-      search_result.attr( "href", "#map=9/"+ city._geoloc.lat + "/" + city._geoloc.lng );
+      search_result.attr( "href", "/#map=9/"+ city._geoloc.lat + "/" + city._geoloc.lng );
       flag = $("<div class='flag'><img width='20px' src='http://lipis.github.io/flag-icon-css/flags/4x3/"+ country_code + ".svg'></div>")
       block = $("<div class='city'><p class='name'><b>"+ city._highlightResult.name.value +"</b></p><p class='country'>" + city.country + "</p>")
       flag.appendTo(search_result);
       block.appendTo(search_result);
+      search_result.on('click', function ( e ){
+         $('.query_wrapper input').val(city.name);
+      });
       search_result.appendTo(this.container);
+
    },
 
    displayCities: function ( cities ) {
+      if (cities.length == 0 ) {
+         this.displayNoResults();
+         return;
+      }
 
       cities.forEach(  function ( city ){
          this.displayCity( city );
       }.bind(this))
+   },
+
+   displayNoResults: function (){
+      this.container.html("<div class='search_results'> <div class='noresults'>No city found...</div></div>")
    }
 }
 
 //initalizer for Algoliasearch
 var SearchProxy = function ( ){
-   this.client = algoliasearch('F7SOH92SLF', '073e04ff24420c3b1e97c0ecea951392');
-   this.index = this.client.initIndex('cities');
+   this.client = algoliasearch('3OGRF9NUBE', '1760f1ce147927dfcbe506dc64a822a3');
+   this.index = this.client.initIndex('cities_v1');
 }
 
 SearchComponent = function ( resultComponent ){
