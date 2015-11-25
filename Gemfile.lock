@@ -58,8 +58,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    cities (0.3.1)
-      multi_json (~> 1.8)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cliver (0.3.2)
@@ -314,7 +312,6 @@ DEPENDENCIES
   algoliasearch
   autoprefixer-rails
   bigdecimal (~> 1.1.0)
-  cities
   coffee-rails (~> 4.1.0)
   composite_primary_keys (~> 8.1.0)
   coveralls

@@ -87,7 +87,6 @@ gem "dalli"
 gem "kgio"
 
 # indexing city in algolia
-gem "cities"
 gem "algoliasearch"
 
 # Gems useful for development

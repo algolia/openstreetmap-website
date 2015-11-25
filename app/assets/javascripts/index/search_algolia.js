@@ -53,7 +53,7 @@ SearchResultComponent.prototype = {
 //initalizer for Algoliasearch
 var SearchProxy = function ( ){
    this.client = algoliasearch('3OGRF9NUBE', '1760f1ce147927dfcbe506dc64a822a3');
-   this.index = this.client.initIndex('cities_v1');
+   this.index = this.client.initIndex('cities_v2');
 }
 
 SearchComponent = function ( resultComponent ){
